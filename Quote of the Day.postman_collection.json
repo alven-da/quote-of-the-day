@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "12c38a26-83c5-40e8-a14b-8de0ac68bc3d",
+		"name": "Quote of the Day",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30978163"
+	},
+	"item": [
+		{
+			"name": "Get Quote By ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/quote/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"quote",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68933096918a2012be7569d5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Quote",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"My author saved as 2\",\n    \"quote\": \"My quote saved as 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/quote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quote",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"Anonymous\",\n    \"quote\": \"What you do today can improve all your tomorrows.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/quote/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"quote",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "689330e1949a3c943e313b70"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

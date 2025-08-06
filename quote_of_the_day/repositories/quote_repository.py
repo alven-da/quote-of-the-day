@@ -10,3 +10,7 @@ class QuoteRepositoryInterface(ABC):
     @abstractmethod
     def create_quote(self, quote_data: Quote) -> Quote:
         pass
+
+    @abstractmethod
+    def update_quote(self, quote_data: Quote) -> Quote:
+        pass

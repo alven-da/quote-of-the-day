@@ -3,11 +3,14 @@
 import os
 import sys
 
+from quote_of_the_day.infra.mongo.connector import MongoConnection
+
 
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quote_of_the_day.settings')
     try:
+        MongoConnection()
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(

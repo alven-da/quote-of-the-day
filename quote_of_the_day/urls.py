@@ -24,6 +24,6 @@ urlpatterns = [
     path('', HealthView.as_view(), name='health-check'),
 
     # API for Quote
-    path('quote/<str:id>/', GetQuoteView.as_view(), name='get-quote'),
-    path('quote', CreateQuoteView.as_view(), name='create-quote')
+    path('quote/<str:id>', GetQuoteView.as_view(), name='get-quote'),
+    path('quote', CreateQuoteView.as_view(), name='create-quote'),
 ]
